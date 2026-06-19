@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+/* Botão de ativação do menu */
+.btn {
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    background: #1b1b1b;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+}
+.btn i {
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+.btn.click {
+    left: 260px;
+}
+
+/* Configuração da Sidebar */
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px; /* Começa escondida para fora da tela */
+    background: #1b1b1b;
+    transition: left 0.4s ease;
+}
+.sidebar.show {
+    left: 0;
+}
+
+.sidebar .text {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center;
+    background: #1e1e1e;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    background: #1b1b1b;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+.sidebar ul li {
+    line-height: 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar ul li a {
+    position: relative;
+    color: #e6e6e6;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+.sidebar ul li:hover a {
+    color: #00bcd4;
+    background: #1e1e1e;
+}
+
+/* Ícones internos dos links */
+.sidebar ul li a i {
+    margin-right: 15px;
+}
+
+/* Posicionamento das setas do dropdown */
+.sidebar ul li a i.bx-chevron-down {
+    position: absolute;
+    right: 20px;
+    transition: transform 0.4s ease;
+}
+.sidebar ul li a i.bx-chevron-down.rotate {
+    transform: rotate(-180deg);
+}
+
+/* Submenus (Escondidos por padrão) */
+.sidebar ul ul {
+    position: static;
+    display: none;
+}
+.sidebar ul .feat-show.show,
+.sidebar ul .serv-show.show {
+    display: block;
+}
+
+.sidebar ul ul li {
+    line-height: 42px;
+    border-bottom: none;
+}
+
+.sidebar ul ul li a {
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 55px; /* Recuo para dar efeito de hierarquia */
+}
+
+.sidebar ul li.active a {
+    color: #00bcd4;
+    background: #1e1e1e;
+    border-left: 3px solid #00bcd4;
+}

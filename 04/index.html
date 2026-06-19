@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Sidebar Menu - CodingLab</title>
+    
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="btn">
+        <i class="bx bx-menu"></i>
+    </div>
+
+    <nav class="sidebar">
+        <div class="text">Side Menu</div>
+        <ul>
+            <li class="active"><a href="#"><i class="bx bx-grid-alt"></i> Dashboard</a></li>
+            
+            <li>
+                <a href="#" class="feat-btn"><i class="bx bx-features"></i> Features
+                    <i class="bx bx-chevron-down first"></i>
+                </a>
+                <ul class="feat-show">
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Elements</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#" class="serv-btn"><i class="bx bx-server"></i> Services
+                    <i class="bx bx-chevron-down second"></i>
+                </a>
+                <ul class="serv-show">
+                    <li><a href="#">App Design</a></li>
+                    <li><a href="#">Web Design</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#"><i class="bx bx-envelope"></i> Portfolio</a></li>
+            <li><a href="#"><i class="bx bx-user"></i> Overview</a></li>
+        </ul>
+    </nav>
+
+    <script src="./script.js"></script>
+</body>
+</html>
